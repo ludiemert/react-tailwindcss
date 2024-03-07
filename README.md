@@ -31,9 +31,6 @@ aesthetics.
 * Tailwind CSS: Adopted to speed up front-end development, allowing efficient and responsive design customization
   directly in the markup, without the need to leave the HTML context.
   
-*  TypeScript: Used to add an extra layer of security to development through static typing, improving code quality
-   and reducing the likelihood of errors.
-
 
 ## Featured Resources
 
