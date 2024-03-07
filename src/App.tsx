@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import ImageSlider from "./components/ImageSlider";
+
 import Navbar from "./components/Navbar";
 import Offers from "./components/Offers";
 import Plan from "./components/Plan";
@@ -14,6 +15,7 @@ export default function App() {
       <Plan />
       <Rooms />
       <ImageSlider />
+
     </div>
   );
 }
