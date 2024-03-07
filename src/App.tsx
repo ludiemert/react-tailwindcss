@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ImageSlider from "./components/ImageSlider";
 
@@ -15,6 +16,7 @@ export default function App() {
       <Plan />
       <Rooms />
       <ImageSlider />
+      <Footer />
 
     </div>
   );
