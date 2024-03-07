@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 
 const ImageSlider = () => {
@@ -21,21 +21,39 @@ const ImageSlider = () => {
     },
   ];
 
+const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length -1 : currentIndex -1;
+    setCurrentIndex(newIndex)
+  }
+ 
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length -1
+    const newIndex = isLastSlide ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex)
+  };
+
+
+
   return (
-    <div className="max-w[1400px] h-[580px] w-full m-auto py-16 px-4 relative group">
+    <div className="max-w-[1400px] h-[580px] w-full m-auto py-16 px-4 relative group">
       <div
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
-        style={{ backgroundImage: `url(${slides[2].url})` }}
+        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
       ></div>
 
       {/* left Arrow */}
-      <div>
-        <BsChevronCompactLeft />
+      <div className="absolute top-[50%] -translate-x-0 trans-y-[-50%] left-5 text-2xl rounded-full p-2
+      group-hover:bg-black/20 text-white cursor-pointer">
+        <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
 
       {/* Right Arrow */}
-      <div>
-        <BsChevronCompactRight />
+      <div className="absolute top-[50%] -translate-x-0 trans-y-[-50%] right-5 text-2xl rounded-full p-2
+      group-hover:bg-black/20 text-white cursor-pointer">
+        <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
     </div>
   );
