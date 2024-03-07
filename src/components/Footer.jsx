@@ -4,8 +4,8 @@ import { TiSocialPinterest } from "react-icons/ti";
 
 export default function Footer() {
   return (
-    <div>
-      <div>
+    <div className=" w-full mt-24 bg-gray-900 text-gray-300 py-2 px-2">
+      <div className=" max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8 px-4">
         <div>
           <h6>Solutions</h6>
           <ul>
@@ -48,8 +48,20 @@ export default function Footer() {
           <p>The Latest deals, articles and resources sent to your inbox weekl😉</p>
           <form>
             <input type="email" placeholder="Enter email...." />
-            <button>Subscribe</button>
+            <button className=" p-2 mb-4 rounded-md">Subscribe</button>
           </form>
+        </div>
+      </div>
+
+      <div>
+        <p>
+          2024 Experiences, LLC. All rights reserve!! 😎
+        </p>
+        <div>
+          <FaFacebook />
+          <FaInstagram />
+          <FaTwitter />
+          <TiSocialPinterest />
         </div>
       </div>
     </div>
