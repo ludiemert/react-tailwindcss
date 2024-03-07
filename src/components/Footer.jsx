@@ -43,6 +43,14 @@ export default function Footer() {
             <li>Conditions</li>
           </ul>
         </div>
+        <div>
+          <p>Subscribe to our newsletters</p>
+          <p>The Latest deals, articles and resources sent to your inbox weekl😉</p>
+          <form>
+            <input type="email" placeholder="Enter email...." />
+            <button>Subscribe</button>
+          </form>
+        </div>
       </div>
     </div>
   );
