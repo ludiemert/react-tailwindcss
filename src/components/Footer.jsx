@@ -53,15 +53,16 @@ export default function Footer() {
         </div>
       </div>
 
-      <div>
-        <p>
+      <div className="flex flex-col max-w-[1400px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500">
+        <p className="py-4">
           2024 Experiences, LLC. All rights reserve!! 😎
         </p>
-        <div>
+
+        <div className=" flex justify-between sm:w-[300px] pt-4 text-2xl">
           <FaFacebook />
           <FaInstagram />
           <FaTwitter />
-          <TiSocialPinterest />
+          <TiSocialPinterest size={30} />
         </div>
       </div>
     </div>
